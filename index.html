@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Documental Interactivo - Pawkar Raymi</title>
+    <style>
+        :root {
+            --main-bg: #4CAF50;
+            --main-text: #fff;
+            --secondary-bg: #f4f4f4;
+            --secondary-text: #333;
+            --highlight: #FFC107;
+        }
+
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            color: var(--secondary-text);
+            background-color: var(--secondary-bg);
+            line-height: 1.6;
+        }
+
+        header {
+            background: linear-gradient(135deg, var(--main-bg), #66bb6a);
+            color: var(--main-text);
+            text-align: center;
+            padding: 2rem;
+        }
+
+        header h1 {
+            font-size: 2.5rem;
+            margin: 0.5rem 0;
+        }
+
+        nav {
+            background: var(--main-bg);
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            padding: 1rem 0;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        nav a {
+            color: var(--main-text);
+            text-decoration: none;
+            margin: 0 1rem;
+            padding: 0.5rem 1rem;
+            border-radius: 5px;
+            font-weight: bold;
+            transition: background 0.3s;
+        }
+
+        nav a:hover {
+            background: var(--highlight);
+            color: var(--secondary-text);
+        }
+
+        section {
+            padding: 2rem;
+            margin: 1rem auto;
+            max-width: 1200px;
+            background: var(--main-text);
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        section h2 {
+            text-align: center;
+            color: var(--main-bg);
+            margin-bottom: 1rem;
+        }
+
+        .interactive {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1rem;
+            justify-content: center;
+        }
+
+        .card {
+            background: var(--secondary-bg);
+            color: var(--secondary-text);
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            padding: 1rem;
+            flex: 1 1 calc(33.333% - 1rem);
+            max-width: calc(33.333% - 1rem);
+            transition: transform 0.3s;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+        }
+
+        .card h3 {
+            color: var(--main-bg);
+        }
+
+        footer {
+            background: var(--main-bg);
+            color: var(--main-text);
+            text-align: center;
+            padding: 1rem;
+            margin-top: 2rem;
+        }
+
+        video, iframe, img {
+            width: 100%;
+            max-width: 100%;
+            border-radius: 8px;
+            margin-top: 1rem;
+        }
+
+        @media (max-width: 768px) {
+            nav {
+                flex-direction: column;
+            }
+
+            .card {
+                flex: 1 1 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Ritual Pawkar Raymi</h1>
+        <p>Explora la magia y significado del Pawkar Raymi, una tradición ancestral ecuatoriana.</p>
+    </header>
+
+    <nav>
+        <a href="#inicio">Inicio</a>
+        <a href="#secciones">Secciones</a>
+        <a href="#mapa">Mapa</a>
+        <a href="#galeria">Galería</a>
+        <a href="#quiz">Quiz</a>
+        <a href="#testimonios">Testimonios</a>
+    </nav>
+
+    <section id="inicio">
+        <h2>Introducción</h2>
+        <p>Bienvenidos a este documental interactivo que destaca el Pawkar Raymi, una celebración que honra la fertilidad, la naturaleza y el legado cultural de los Kichwa en Ecuador.</p>
+        <video controls>
+            <source src="introduccion.mp4" type="video/mp4">
+            Tu navegador no soporta la reproducción de video.
+        </video>
+    </section>
+
+    <section id="secciones">
+        <h2>Secciones Interactivas</h2>
+        <div class="interactive">
+            <div class="card">
+                <h3>Origen y Significado</h3>
+                <p>El Pawkar Raymi celebra el florecimiento de la vida, conectando a las comunidades con la Pachamama.</p>
+                <iframe src="https://timeline.knightlab.com/embed/your-timeline-id" style="width:100%; height:300px; border:none;"></iframe>
+            </div>
+            <div class="card">
+                <h3>Rituales Principales</h3>
+                <p>Incluye la siembra ceremonial, danzas y ofrendas que expresan gratitud a la naturaleza.</p>
+                <a href="https://www.canva.com/design/some-design-id" target="_blank">
+                    <img src="infografia.jpg" alt="Infografía de los rituales principales">
+                </a>
+            </div>
+            <div class="card">
+                <h3>Relevancia Cultural</h3>
+                <p>El Pawkar Raymi fortalece la identidad cultural y fomenta la armonía entre los pueblos.</p>
+                <div style="text-align: center;">
+                    <iframe src="https://juxtapose.knightlab.com/embed/comparison-id" style="width:100%; height:300px; border:none;"></iframe>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+
+    <section id="mapa">
+        <h2>Mapa Interactivo</h2>
+        <iframe src="https://storymap.knightlab.com/embed/your-map-id" style="width:100%; height:600px; border:none;"></iframe>
+        <p>Explora los lugares más significativos del Pawkar Raymi en las comunidades indígenas de Ecuador.</p>
+    </section>
+
+    <section id="galeria">
+        <h2>Galería Multimedia</h2>
+        <div class="gallery">
+            <div>
+                <img src="img1.jpg" alt="Preparativos para el Pawkar Raymi">
+                <p>Preparativos ceremoniales con flores y frutas.</p>
+            </div>
+            <div>
+                <video controls>
+                    <source src="danza.mp4" type="video/mp4">
+                    Tu navegador no soporta videos.
+                </video>
+                <p>Un grupo realiza la danza tradicional del Pawkar Raymi.</p>
+            </div>
+            <!-- Añadir más elementos multimedia según sea necesario -->
+        </div>
+    </section>
+    
+
+    <section id="quiz">
+        <h2>Quiz Interactivo</h2>
+        <iframe src="https://quizizz.com/join/quiz/677c81e0a93331a465c5a137/start?from=admin&preview=true" style="width:100%; height:600px; border:none;"></iframe>
+        <p>Pon a prueba tu conocimiento sobre el Pawkar Raymi y descubre datos fascinantes.</p>
+    </section>
+    
+    <section id="testimonios">
+        <h2>Voces de la Comunidad</h2>
+        <div class="testimonios">
+            <div>
+                <img src="person1.jpg" alt="María, Practicante">
+                <blockquote>"El Pawkar Raymi es nuestra conexión con la madre tierra."</blockquote>
+                <p><strong>María, 65 años:</strong> Llevo toda mi vida participando en esta ceremonia...</p>
+            </div>
+            <div>
+                <img src="person2.jpg" alt="Jorge, Joven Participante">
+                <blockquote>"Es un momento para recordar nuestras raíces."</blockquote>
+                <p><strong>Jorge, 29 años:</strong> Cada año bailo junto a mi comunidad para...</p>
+            </div>
+            <!-- Añadir más testimonios -->
+        </div>
+    </section>
+    
+    <footer>
+        <p>Creado por [Tu Nombre]. Todos los derechos reservados &copy; 2025.</p>
+    </footer>
+</body>
+</html>
